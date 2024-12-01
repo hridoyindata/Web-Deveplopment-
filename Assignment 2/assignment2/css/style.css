@@ -1,0 +1,275 @@
+/* General Styles for the whole webpage */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333; /* Dark grey text color */
+}
+
+header {
+    background-color: #4CAF50; /* Green background color for header */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Navigation bar styles */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none; /* Removes underline from links */
+    font-size: 1.2em;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for navigation links */
+nav ul li a:hover {
+    background-color: #45a049;
+    color: #000;
+    border-radius: 5px;
+}
+
+/* Active link styling */
+nav ul li a.active {
+    font-weight: bold;
+    background-color: #45a049;
+    border-radius: 5px;
+}
+
+/* Welcome message styles */
+.moving-text-container {
+    text-align: center;
+    background-color: #333;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.moving-text {
+    font-size: 1.8em;
+    animation: slideDown 4s ease-out forwards;
+    color: #ff6347;
+    position: relative;
+    opacity: 0;
+}
+
+/* Keyframes for sliding the text down */
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Centering the intro section */
+.intro-section {
+    text-align: center;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 2px;
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+/* Coffee Gallery Styles */
+.coffee-gallery {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.coffee-gallery figure {
+    text-align: center;
+    width: 18%;
+}
+
+.coffee-gallery img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.coffee-gallery img:hover {
+    transform: scale(1.1); /* Zoom on hover */
+}
+
+.coffee-gallery figcaption {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Form Styles */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Center form within the page */
+.centered-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+/* Consistent width for inputs and select elements */
+input, select, textarea {
+    width: 100%; 
+    max-width: 500px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+
+input[type="submit"] {
+    width: 100%; /* Make the submit button consistent with other elements */
+    max-width: 500px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Footer stays at the bottom for the Features page */
+.features-footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Fix alignment for radio buttons and checkboxes */
+input[type="radio"], input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+    margin-right: 10px;
+}
+
+label[for="subscribe-yes"], label[for="subscribe-no"], label[for="terms"] {
+    display: inline;
+    font-weight: normal;
+    margin-right: 20px;
+}
+
+/* Order page form specific styles */
+.same-as-delivery-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Consistent margin with other elements */
+}
+
+.same-as-delivery-container input[type="checkbox"] {
+    margin: 0; 
+}
+
+.same-as-delivery-container label {
+    margin-left: 5px; /* Add a small space between the checkbox and label */
+    font-weight: bold; /* Maintain bold text for the label */
+}
+/* Thinner and more compact Location banner */
+.location-banner {
+    background-color: #4c7f51;
+    color: #0b0239;
+    padding: 3px 8px; /* Reduced padding for thinner banner */
+    text-align: center;
+    font-size: 1em;
+    border-radius: 3px;
+    box-shadow: 0px 2px 3px rgba(137, 120, 120, 0.2);
+    margin: 2px auto;
+    width: 80%;
+}
+
+/* Our Coffees section */
+.intro-section h2 {
+    margin-top: 100px;
+}
+
+.coffee-gallery {
+    margin-top: 15px; /* Ensures coffees section stays directly below the banner */
+}
+
+/* Styles specific to the Features page */
+.features-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Height to center the content */
+}
+
+.features-list {
+    background-color: #ffffff9f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.features-list h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.features-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+/* Features list individual list item styling */
+.features-list ul li {
+    margin-bottom: 10px;
+}
+
+.features-list ul li a {
+    text-decoration: none;
+    color: #4c6faf;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Adds smooth transition effect for color change */
+}
+
+.features-list ul li a:hover {
+    color: #6c118b;
+}

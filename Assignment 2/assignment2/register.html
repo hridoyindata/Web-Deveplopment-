@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Hridoy Ahmed, Student ID: 103798793">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreamy Cafe - Register</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <div class="moving-text-container">
+        <h1 class="moving-text">Welcome to Dreamy Cafe</h1>
+    </div>
+    <header>
+        <nav>
+            <ul>  <!-- Navigation links with active link highlighted -->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.html" class="active">Register</a></li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="features.html">Features</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="centered-form">
+            <h2>Register</h2>
+            <form id="registerForm" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php" method="POST">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                   <!-- Input field for password, required -->
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                 <!-- Dropdown for selecting favorite coffee -->
+                <label for="favourite-coffee">Favourite Coffee:</label>
+                <select id="favourite-coffee" name="favourite-coffee">
+                    <option value="espresso">Espresso</option>
+                    <option value="latte">Latte</option>
+                    <option value="cappuccino">Cappuccino</option>
+                    <option value="black coffee">Black Coffee</option>
+                    <option value="ice mocha">Ice Mocha</option>
+                </select>
+                <!-- Radio buttons for subscribing to the newsletter -->
+                <label>Subscribe to Newsletter:</label>
+                <div>
+                    <input type="radio" id="subscribe-yes" name="newsletter" value="yes">
+                    <label for="subscribe-yes">Yes</label>
+                    <input type="radio" id="subscribe-no" name="newsletter" value="no">
+                    <label for="subscribe-no">No</label>
+                </div>
+                <!-- Checkbox for agreeing to the terms and conditions, required -->
+                <div>
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the terms and conditions</label>
+                </div>
+
+                <input type="submit" value="Register">
+                
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Dreamy Cafe. All rights reserved.</p>
+    </footer>
+</body>
+</html>

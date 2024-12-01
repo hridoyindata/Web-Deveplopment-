@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Hridoy Ahmed, Student ID: 103798793">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreamy Cafe - Order</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <div class="moving-text-container">
+        <h1 class="moving-text">Welcome to Dreamy Cafe</h1>
+    </div>
+    <header> <!-- Header section containing navigation bar -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="order.html" class="active">Order</a></li>
+                <li><a href="features.html">Features</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>  <!-- Main content section for the order form -->
+        <section class="centered-form"> 
+            <h2>Order Coffee</h2> 
+            <form id="orderForm" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php" method="POST">
+                <label for="delivery-pickup">Delivery or Pickup:</label>
+                <select id="delivery-pickup" name="delivery-pickup">
+                    <option value="pickup">Pickup</option>
+                    <option value="delivery">Delivery</option>
+                </select>
+                
+                <!-- Delivery address field -->
+                <div id="deliveryAddressField">
+                    <label for="delivery-address">Delivery Address:</label>
+                    <input type="text" id="delivery-address" name="delivery-address">
+
+                    <label for="delivery-postcode">Delivery Postcode:</label>
+                    <input type="text" id="delivery-postcode" name="delivery-postcode">
+                </div>
+               <!-- Billing address fields -->
+                <label for="billing-address">Billing Address:</label>
+                <input type="text" id="billing-address" name="billing-address">
+
+                <label for="billing-postcode">Billing Postcode:</label>
+                <input type="text" id="billing-postcode" name="billing-postcode">
+
+                <!-- Checkbox and label for same as delivery address -->
+                <div class="same-as-delivery-container">
+                    <input type="checkbox" id="sameAsDelivery" name="sameAsDelivery">
+                    <label for="sameAsDelivery">Same as delivery address</label>
+                </div>
+
+                <label for="contact-number">Contact Number:</label>
+                <input type="text" id="contact-number" name="contact-number" required>
+
+                <label for="email-receipt">Email for Receipt:</label>
+                <input type="email" id="email-receipt" name="email-receipt" required>
+
+                <label for="payment-method">Pay On:</label>
+                <select id="payment-method" name="payment-method">
+                    <option value="pickup">Pickup</option>
+                    <option value="online">Online</option>
+                </select>                                            
+                 <!-- Credit card information, only shown if "Online" payment is selected -->
+                <div id="creditCardField">
+                    <label for="credit-card">Credit Card:</label>
+                    <select id="card-type" name="card-type">
+                        <option value="visa">Visa</option>
+                        <option value="mastercard">MasterCard</option>
+                        <option value="amex">American Express</option>
+                    </select>
+                    <input type="text" id="credit-card" name="credit-card">
+                </div>
+
+                <input type="submit" value="Place Order">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Dreamy Cafe. All rights reserved.</p>
+    </footer>
+</body>
+</html>
